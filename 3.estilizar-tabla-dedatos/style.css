@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    border-spacing: 0; /*espacio 0 entre celdas*/
+    border-collapse: collapse; /*borde fino*/
+    width: 600px;
+    margin: 100px auto; /*más centrado con el auto*/
+    background-color: rgb(199, 197, 197);
+}
+
+td, th{
+    border: solid 1px white;
+}
+
+tr:nth-child(even){ /*colorea las filas en orden par*/
+    background-color: #eee; 
+}
+
+td:nth-child(n + 3), /*a partir de la posicion 3 hasta terminar, alinear, es mejor con estga formula que poner td th por separado y alinear*/
+th:nth-child(n + 3){
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: rgba(24, 169, 115, 0.77) ; 
+}
+
+thead {
+    background-color: black;
+    color: white;
+    position: sticky; /*buen efecto para cuando scrolleemos el head o title(probar) se queda fijo*/
+    top: 0; /*si o si este top 0 para que funcione el sticky*/
+}

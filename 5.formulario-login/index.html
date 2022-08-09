@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Login Form | CSS</title>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="login-container">
+      <h2>Welcome Mate!</h2>
+      <p>Select authentication method</p>
+      
+      <form action=""> 
+          <p>
+            <label for="username">username</label>
+            <input class="input" type="text" name="username" id="username" />
+          </p>
+
+          <p>
+            <label for="password">password</label>
+            <input class="input" type="password" name="password" id="password" />
+          </p>
+
+            <div class="options">
+              <div>
+                Remember me <input type="checkbox" name="rememberme" id="rememberme"/>
+              </div>
+              <div>
+                <a href="#"> I forgot my password</a>
+              </div>
+            </div>
+
+            <p>
+              <input type="submit" class="btn btn-login" value="Log in"/> <!--btn es clase generica y btn-login mas especifico-->
+            </p>
+            <div class="providers">
+              <span>Choose another option to authenticate</span>
+              <button class="btn btn-google">Google</button>
+              <button class="btn btn-facebook">Facebook</button>
+              <button class="btn btn-twitter">Twitter</button>
+            </div>
+          </form>
+      </div>
+      <div class="welcome-screen-container"></div> <!--img de fondo de bienvenida-->
+     </div>
+ </body>
+</html>

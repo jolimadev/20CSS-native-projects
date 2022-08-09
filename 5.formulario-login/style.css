@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  /*bg colors gradient moving effect*/
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+/*------------------container-------------------------*/
+.form-container {
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+
+}
+
+.form-container .login-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form-container .login-container > h2 {
+    text-align: center;
+    font-size: 2rem; /*form title-login title*/
+}
+
+.form-container .login-container > p,
+.form-container .login-container > span {
+  text-align: center;
+  color: rgb(113, 112, 112);
+}
+
+.form-container .login-container{
+  display: block;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.form-container .login-container input.input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box; /*se adapte solo a su contenedor*/
+  padding: 10px;
+  border: solid 1px #8d4863;
+  border-radius: 5px;
+}
+
+.form-container .login-container input.input:focus {
+  outline: solid 2px #23a6d5; /*when i select the input,activate this color*/
+}
+
+.form-container .login-container .options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-container a {
+  color: #3523d5;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+.form-container .login-container .providers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*------------------BUTTONS-------------------------*/
+.btn {
+  border: none;
+  padding: 15px 0; /*15 top &down and 0px left and right*/
+  width: 100%;
+  font-weight: bolder;
+  display: block;
+  border: 5px;
+  text-transform: uppercase;/*Mayúscula*/
+  cursor: pointer;
+}
+.btn.btn-login { /*misma clase(poner el boton pegado)*/
+  background-color: black;
+  color: white;
+}
+.btn.btn-login:hover {
+  background-color: #333;
+}
+.btn.btn-facebook {
+  background-color: #1877f2;
+  color: white;
+}
+.btn.btn-facebook:hover {
+  background-color: #1464cc;
+}
+
+.btn.btn-google {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.btn.btn-google:hover {
+  background-color: rgb(241, 240, 240);
+}
+
+.btn.btn-twitter {
+  background-color: #1d9bf0 ;
+  color: white;
+}
+.btn.btn-twitter:hover{
+  background-color: #1c7fc1;
+}
+/*------------------keyframe connected to the body-------------------------*/
+  @keyframes gradient {  /*bg colors gradient moving effect*/
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+
+/*-----------------welcome-screen-container------------------------*/
+
+.form-container .welcome-screen-container {
+    background-color: black;
+    background-image: url('https://s3.amazonaws.com/revue/items/images/003/794/915/original/pQoJqM3.gif?1542040546');
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+}
+
+@media screen and(max-width:1357px) {
+    .form-container{
+      width: 95%;
+    }
+
+    .form-container .login-container {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-container .welcome-screen-container {
+      width:  40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+  .form-container {
+    height: 72%;
+  }
+
+  .form-container .login-container {
+    width:  350px;
+  }
+  .form-container .welcome-screen-container {
+    display: none;
+  }
+}

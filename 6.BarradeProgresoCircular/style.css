@@ -1,0 +1,54 @@
+
+body {
+  font-family: sans-serif;
+  background-color: yellow;
+}
+
+.progressbar-container {
+ 
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+
+}
+.progressbar-container .outer-box {
+  border-radius: 50%;
+  background-color: rgb(92, 215, 35);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progressbar-container .outer-box .inner-box {
+  font-size: 2rem ;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+}
+
+.progressbar-container svg {
+  position: absolute;
+
+}
+
+.progressbar-container circle {
+  fill: none;
+  stroke:url(#gradientColor); /*trazo para el gradiente del circulo*/
+  stroke-width: 20px;
+  stroke-dasharray: 550; /*distance between the points*/
+  stroke-dashoffset: 550;
+  animation: loading 10s linear forwards; /*10s = time velocity*/
+}
+
+@keyframes loading {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
