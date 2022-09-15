@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+    font-family: 'Roboto Condensed';
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); 
+}
+
+.personas-container {
+    margin: 100px auto;
+    width: 500px;
+    display: flex;
+}
+.personas-container .persona {
+    position: relative;
+    margin-right: -20px; /*images stepped effect*/
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.personas-container .persona img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 2px orange;
+    transition: transform 0.3s ease-in-out;
+}
+
+.personas-container .persona:hover img{
+    transform: translateY(-5px); /*animation uppy img*/
+}
+.personas-container .persona .name {
+    position: absolute;
+    background-color:#ffb700;
+    color: white;
+    border-radius: solid 1px white;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -60px;
+    left: calc((100% + 10px) * -1); /*move my layer=capa to 50 percent*/
+    padding: 10px 15px;
+}
+.personas-container .persona:hover .name {
+    display: inline-block;
+}
+.personas-container .persona .name .text {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    width: 150px;
+}
+.personas-container .persona .name::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: solid 10px #ffb700;
+    border-bottom:solid 10px transparent;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    left: calc(50% - 10px);
+    bottom: -20px;
+
+}
