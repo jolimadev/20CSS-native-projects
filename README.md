@@ -5,3 +5,8 @@ I practice css with the video course of  my mentor in CSS @marcosrivasrr, 20 pro
 <br>
 
 ![image](https://user-images.githubusercontent.com/84105167/190477912-be79120c-41f0-4708-9e4f-8f079419ef18.png)
+<br>
+<br>
+-------------------------------
+other of the many exercises (sidebar-menu):
+![image](https://user-images.githubusercontent.com/84105167/190504917-d1a99d2b-06e5-48ec-bf17-400265de3e5a.png)
